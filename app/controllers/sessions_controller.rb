@@ -11,8 +11,10 @@ else
   redirect_to action: "new"
 end
 end
-def destroy
 
+def destroy
+session.delete :name
+redirect_to action: "new"
 end
 
 end
