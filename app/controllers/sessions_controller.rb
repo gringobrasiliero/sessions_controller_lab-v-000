@@ -4,11 +4,12 @@ def new
 end
 
 def create
-
-session[:name] = params[:name]
+if params[:name] = nil
+  redirect_to '/login'
+elsif session[:name] = params[:name]
 redirect_to '/'
 end
-
+end
 def destroy
 
 end
