@@ -4,10 +4,11 @@ def new
 end
 
 def create
-if params[:name] = nil
-  redirect_to action: "new"
-elsif session[:name] = params[:name]
+if !params[:name].blank?
+   session[:name] = params[:name]
 redirect_to '/'
+else
+  redirect_to action: "new"
 end
 end
 def destroy
