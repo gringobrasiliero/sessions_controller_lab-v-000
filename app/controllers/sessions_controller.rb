@@ -5,7 +5,7 @@ end
 
 def create
 if params[:name] = nil
-  redirect_to '/login'
+  redirect_to '/sessions'
 elsif session[:name] = params[:name]
 redirect_to '/'
 end
